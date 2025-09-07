@@ -11,3 +11,10 @@ class Book(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Author(models.Model):
+    name = models.CharField(max_length=64)
+    surname = models.CharField(max_length=128)
+    photo = models.FileField(upload_to="authors_avatars/")
+    updated_at = models.DataTimeField(null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
