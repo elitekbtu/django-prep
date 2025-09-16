@@ -15,4 +15,6 @@ class AuthorAdmin(admin.ModelAdmin):
 
 @admin.register
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('id')
+    list_display = ("id", "name", "updated_at", "created_at")
+    search_fields = ("name")
+    list_filters = ("updated_at", "created_at")
