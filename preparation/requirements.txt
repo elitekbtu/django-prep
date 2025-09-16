@@ -2,3 +2,4 @@ django
 asgiref
 sqlparse
 djangorestframework
+python-decouple
