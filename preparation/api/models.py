@@ -6,7 +6,7 @@ class Author(models.Model):
     surname = models.CharField(max_length=128)
     photo = models.FileField(upload_to="authors_avatars/")
 
-    updated_at = models.DataTimeField(null=True)
+    updated_at = models.DateTimeField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -15,7 +15,7 @@ class Author(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=128)
 
-    updated_at = models.DataTimeField(null=True)
+    updated_at = models.DateTimeField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

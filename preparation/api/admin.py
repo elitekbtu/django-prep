@@ -13,8 +13,8 @@ class AuthorAdmin(admin.ModelAdmin):
     search_fields = ("name", "surname")
     list_filter = ("updated_at", "created_at")
 
-@admin.register
+@admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("id", "name", "updated_at", "created_at")
-    search_fields = ("name")
+    search_fields = ("name",)
     list_filters = ("updated_at", "created_at")
